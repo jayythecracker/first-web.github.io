@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Table with AppBar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="main.js"></script>
+  <style src="./style.css"></style>
+</head>
+<body class="bg-blue-950">
+
+  <!-- AppBar -->
+  <div class="bg-blue-600 text-white py-2.5 px-2 fixed w-full top-0 z-10 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">My App</h1>
+      <button id="menu-button" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+        Contact
+      </button>
+    </div>
+    <!-- Dropdown Menu -->
+    <div id="dropdown-menu" class="hidden absolute bg-white text-black right-4 mt-2 py-2 w-48 border border-gray-200 rounded shadow-md">
+      <a href="#" class="block px-4 py-2 hover:bg-gray-200">Facebook</a>
+      <a href="https://t.me/jayythecracker" class="block px-4 py-2 hover:bg-gray-200">Telegram</a>
+      <a href="#" class="block px-4 py-2 hover:bg-gray-200">09251651757</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mx-auto pt-20">
+    <div id="loading" class="flex items-center justify-center h-screen hidden">
+     <div class="text-cyan-950"> Loading ...</div>
+    
+    </div>
+
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-200">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 border-b">ID</th>
+            <th class="px-4 py-2 border-b">Title</th>
+            <th class="px-4 py-2 border-b">Completed</th>
+          </tr>
+        </thead>
+        <tbody id="todo-table-body">
+          <!-- Rows will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+</body>
+</html>
